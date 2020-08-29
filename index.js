@@ -1,31 +1,109 @@
-let n = document.querySelectorAll(".g47SY");
-let num = n[1].getAttribute("title");
-let i = 0;
+    function abrirSeguidores(){
+        setTimeout(() => {
+            let seguidores = document.querySelectorAll(".-nal3");
+            seguidores[1].click()
+        }, 1000);
+    }
 
-let seguidores = document.querySelectorAll(".-nal3");
-let nseguidores = document.querySelectorAll("g47SY")[1].getAttribute("title");
+    function fecharSeguidores(){
+        setTimeout(() => {
+            let fechar = document.querySelectorAll(".WaOAr button");
+            fechar[0].click();
+        }, 1000);
+    }
 
-let comp = 53.98 * nseguidores;
-let qtd = comp/647.76;
-setTimeout(() => {seguidores[1].click()}, 1000);;
+    function salvarSeguidores(){
+        setTimeout(() => {
+            seguidores = [];
+            let arr = document.querySelectorAll("._0imsa");
+            arr.forEach((a, i) =>{
+                let b = a.getAttribute("title");
+                seguidores.push(b);
+            });
+        }, 1000);
+    }
 
-    setInterval(()=>{
-        if(i<qtd){
-            let div = document.querySelectorAll(".isgrP");
-            let pag = div[0];
-            pag.scrollBy(0, 647.76);
-        }else{
-            clearInterval();
-        }
-        i++
-    }, 1010);
+    function ScrollarSeguidores(){
+        setTimeout(() => {   
+            let n = document.querySelectorAll(".g47SY");
+            let nseguidores = n[1].getAttribute("title");
+            let comp = 53.98 * nseguidores;
+            let qtd = (comp/701.74);
+            let qtdfinal = parseInt(qtd+1, 10);
 
-pessoas = [];
-let arr = document.querySelectorAll("._0imsa");
-arr.forEach((a, i) =>{
-    let b = a.getAttribute("title");
-    pessoas.push(b);
-});
+            let i = 0;
+            setInterval(()=>{
+                if(i<qtdfinal){
+                    let div = document.querySelectorAll(".isgrP");
+                    let pag = div[0];
+                    pag.scrollBy(0, 701.74);
+                    i++
+                }else{
+                    clearInterval();
+                }
+            }, 600);
+        }, 460);
+    }
+
+    function abrirSeguindo(){
+        setTimeout(() => {
+            let seguidores = document.querySelectorAll(".-nal3");
+            seguidores[2].click()
+        }, 1000);
+    }
+
+    function fecharSeguindo(){
+        setTimeout(() => {
+            let fechar = document.querySelectorAll(".WaOAr button");
+            fechar[0].click();
+        }, 1000);
+    }
+
+    function salvarSeguindo(){
+        setTimeout(() => {
+            seguindo = [];
+            let arr = document.querySelectorAll("._0imsa");
+            arr.forEach((a, i) =>{
+                let b = a.getAttribute("title");
+                seguindo.push(b);
+            });
+        }, 1000);
+    }
+
+    function ScrollarSeguindo(){
+        setTimeout(() => {   
+            let n = document.querySelectorAll(".g47SY");
+            let nseguindo = n[2].getAttribute("title");
+            let comp = 53.98 * nseguindo;
+            let qtd = (comp/701.74);
+            let qtdfinal = parseInt(qtd+1, 10);
+
+            let i = 0;
+            setInterval(()=>{
+                if(i<qtdfinal){
+                    let div = document.querySelectorAll(".isgrP");
+                    let pag = div[0];
+                    pag.scrollBy(0, 701.74);
+                    i++
+                }else{
+                    clearInterval();
+                }
+            }, 600);
+        }, 460);
+    }
+
+    async function fluxo() {
+        await abrirSeguidores();
+        await ScrollarSeguidores();
+        await salvarSeguidores();
+        await fecharSeguidores();
+        await abrirSeguindo();
+        await ScrollarSeguindo();
+        await salvarSeguindo();
+        await fecharSeguindo();
+    }
+    fluxo();
+    
 
 pessoas2 = [];
 let arr = document.querySelectorAll("._0imsa");
